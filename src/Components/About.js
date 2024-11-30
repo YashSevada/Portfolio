@@ -4,13 +4,13 @@ const About = () => {
   return  (
     <div className="bg-green min-h-screen flex items-center justify-center text-white">
       {/* Card Container */}
-      <div className="flex flex-col lg:flex-row border border-peach p-6 lg:p-8 rounded-lg max-w-4xl w-full bg-gray-800">
+      <div className="flex flex-col lg:flex-row border border-peach p-4 lg:p-2 rounded-lg max-w-4xl w-full bg-green transition-transform transform scale-105 shadow-xl">
         {/* Left Section (Centered) */}
-        <div className="flex flex-col items-center justify-center lg:items-center border-b lg:border-b-0 lg:border-r border-peach px-6 py-8 lg:py-0 lg:w-1/2">
+        <div className="flex flex-col items-center justify-center lg:items-center border-b lg:border-b-0 lg:border-r border-peach px-6 py-8 lg:py-0 lg:w-1/2 space-y-4">
           {/* Profile Image */}
           <div className="w-32 h-32 bg-gray-400 rounded-full"></div>
-          <h1 className="text-2xl font-bold mt-4 text-peach">Yash Sevada</h1>
-          <hr className="border border-peach w-16 my-2" />
+          <h1 className="text-4xl font-bold mt-4 text-peach">Yash Sevada</h1>
+          <hr className="border border-peach w-36 my-2" />
           <p className="text-lg text-peach">Web Developer</p>
         </div>
 
@@ -21,8 +21,8 @@ const About = () => {
 
           {/* Buttons */}
           <div className="flex mt-6 space-x-4">
-            <button className="bg-peach text-green px-4 py-2 rounded shadow hover:bg-transparent hover:border hover:border-green hover:border-none">
-              Download Resume
+            <button className="bg-peach text-green px-4 py-2 rounded shadow hover:bg-transparent hover:border hover:border-peach hover:text-peach">
+              Download CV
             </button>
             <button className="border border-peach text-peach px-4 py-2 rounded hover:bg-peach hover:text-green">
               Contact Me
@@ -30,7 +30,7 @@ const About = () => {
           </div>
 
           {/* Description */}
-          <p className="text-gray-300 text-sm mt-6 leading-relaxed">
+          <p className="text-white text-sm mt-6 leading-relaxed">
             Experienced full stack developer with a strong foundation in web
             technologies. Proficient in HTML, CSS, React, Node.js, Angular, and
             MongoDB, enabling the creation of dynamic, responsive, and
@@ -38,7 +38,7 @@ const About = () => {
             development, with a focus on delivering high-quality user-friendly
             solutions.
           </p>
-          <p className="text-gray-300 text-sm mt-4 leading-relaxed">
+          <p className="text-white text-sm mt-4 leading-relaxed">
             Proven ability to collaborate with cross-functional teams and meet
             project objectives efficiently. Dedicated to staying up-to-date
             with the latest industry trends and best practices in web

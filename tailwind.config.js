@@ -4,13 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-      transparent: 'transparent',
-      'green': '#5C685D',
-      'peach': '#EEC1A0',
-      'white': '#ffffff',
-      'black': '#000000',
-    },
+        transparent: "transparent",
+        green: "#5C685D",
+        peach: "#EEC1A0",
+        white: "#ffffff",
+        black: "#000000",
+      },
     },
   },
   plugins: [],
-}
+};
