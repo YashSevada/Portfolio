@@ -4,7 +4,7 @@ const About = () => {
   return  (
     <div className="bg-green min-h-screen flex items-center justify-center text-white">
       {/* Card Container */}
-      <div className="flex flex-col lg:flex-row border border-peach p-4 lg:p-2 rounded-lg max-w-4xl w-full bg-green transition-transform transform scale-105 shadow-xl">
+      <div className="flex flex-col lg:flex-row lg:border lg:border-peach p-4 lg:p-2 lg:mt-14 rounded-lg max-w-4xl w-full bg-green transition-transform transform scale-105 shadow-xl">
         {/* Left Section (Centered) */}
         <div className="flex flex-col items-center justify-center lg:items-center border-b lg:border-b-0 lg:border-r border-peach px-6 py-8 lg:py-0 lg:w-1/2 space-y-4">
           {/* Profile Image */}
@@ -21,10 +21,10 @@ const About = () => {
 
           {/* Buttons */}
           <div className="flex mt-6 space-x-4">
-            <button className="bg-peach text-green px-4 py-2 rounded shadow hover:bg-transparent hover:border hover:border-peach hover:text-peach">
+            <button className="bg-peach text-green px-4 py-2 rounded rounded-tl-2xl rounded-br-2xl shadow hover:bg-transparent hover:border hover:border-peach hover:text-peach">
               Download CV
             </button>
-            <button className="border border-peach text-peach px-4 py-2 rounded hover:bg-peach hover:text-green">
+            <button className="border border-peach text-peach px-4 py-2 rounded rounded-tl-2xl rounded-br-2xl hover:bg-peach hover:text-green">
               Contact Me
             </button>
           </div>

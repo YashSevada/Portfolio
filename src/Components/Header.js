@@ -1,7 +1,22 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 
 const Header = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const [isSticky, setIsSticky] = useState(false);
+
+  // Add scroll listener
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    return window.addEventListener("scroll", handleScroll);
+  }, []);
 
   const sideBarOpen = () => {
     setSidebarOpen(true)
@@ -14,36 +29,41 @@ const Header = () => {
   return (
     <div className="bg-green text-white">
       {/* Navigation Bar */}
-      <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-4 py-4 lg:px-10">
-        <span className="text-lg font-bold cursor-pointer">
-          Yash Sevada Portfolio
-        </span>
 
-        {/* Hamburger Icon for Mobile */}
-        <button className="md:hidden text-white text-3xl" onClick={sideBarOpen}>
-          <i className="fi fi-brands-linkedin text-peach text-xl md:text-2xl"></i>
-        </button>
+      <nav
+      className={`${
+        isSticky ? "fixed bg-green shadow-lg z-50" : "absolute"
+      } top-0 left-0 w-full flex justify-between items-center px-4 py-4 lg:px-10 transition-all duration-300`}
+    >
+      <span className="text-lg font-bold cursor-pointer">
+        Yash Sevada Portfolio
+      </span>
 
-        {/* Desktop Navigation Links */}
-        <ul className="hidden md:flex space-x-4 lg:space-x-6">
-          <li className="cursor-pointer hover:text-peach hover:border hover:border-peach px-4 py-2">
-            About
-          </li>
-          <li className="cursor-pointer hover:text-peach hover:border hover:border-peach px-4 py-2">
-            Projects
-          </li>
-          <li className="cursor-pointer hover:text-peach hover:border hover:border-peach px-4 py-2">
-            Skills
-          </li>
-          <li className="cursor-pointer hover:text-peach hover:border hover:border-peach px-4 py-2">
-            Experience
-          </li>
-        </ul>
+      {/* Hamburger Icon for Mobile */}
+      <button className="md:hidden text-white text-3xl" onClick={() => {}}>
+        <i className="fi fi-brands-linkedin text-peach text-xl md:text-2xl"></i>
+      </button>
 
-        <button className="hidden md:block border border-peach text-white px-3 py-2 lg:px-4 lg:py-2 rounded hover:border-none hover:bg-peach hover:text-green">
-          Download CV
-        </button>
-      </nav>
+      {/* Desktop Navigation Links */}
+      <ul className="hidden md:flex space-x-4 lg:space-x-6">
+        <li className="cursor-pointer hover:text-peach hover:border hover:rounded-tl-xl hover:rounded-br-xl hover:border-peach px-4 py-1">
+          About
+        </li>
+        <li className="cursor-pointer hover:text-peach hover:border hover:rounded-tl-xl hover:rounded-br-xl hover:border-peach px-4 py-1">
+          Projects
+        </li>
+        <li className="cursor-pointer hover:text-peach hover:border hover:rounded-tl-xl hover:rounded-br-xl hover:border-peach px-4 py-1">
+          Skills
+        </li>
+        <li className="cursor-pointer hover:text-peach hover:border hover:rounded-tl-xl hover:rounded-br-xl hover:border-peach px-4 py-1">
+          Experience
+        </li>
+      </ul>
+
+      <button className="hidden md:block border border-peach text-white px-3 py-2 lg:px-4 lg:py-2 rounded rounded-tl-2xl rounded-br-2xl hover:border-none hover:bg-peach hover:text-green">
+        Download CV
+      </button>
+    </nav>
 
       {/* Sidebar for Mobile */}
       <div
