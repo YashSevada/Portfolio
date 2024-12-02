@@ -40,7 +40,7 @@ const Header = () => {
       </span>
 
       {/* Hamburger Icon for Mobile */}
-      <button className="md:hidden text-white text-3xl" onClick={() => {}}>
+      <button className="md:hidden text-white text-3xl" onClick={sideBarOpen}>
         <i className="fi fi-brands-linkedin text-peach text-xl md:text-2xl"></i>
       </button>
 

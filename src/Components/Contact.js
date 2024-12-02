@@ -53,22 +53,10 @@ const Contact = () => {
               />
 
               {/* Phone Number Field */}
-              <div className="flex flex-col sm:flex-row sm:space-x-4">
-                <select className="w-full sm:w-1/4 p-2 bg-transparent border border-peach rounded-lg outline-none">
-                  <option value="+91">+91</option>
-                </select>
-                <input
-                  type="text"
-                  placeholder="Phone Number"
-                  className="w-full sm:w-3/4 p-2 bg-transparent border border-peach rounded-lg outline-none"
-                />
-              </div>
-
-              {/* Subject Field */}
               <input
                 type="text"
                 placeholder="Subject"
-                className="w-full p-2 bg-transparent border border-peach rounded-lg outline-none"
+                className="w-full p-2 md:pt-4 sm:pt-4 bg-transparent border border-peach rounded-lg outline-none"
               />
 
               {/* Message Field */}

@@ -4,7 +4,7 @@ const About = () => {
   return  (
     <div className="bg-green min-h-screen flex items-center justify-center text-white">
       {/* Card Container */}
-      <div className="flex flex-col lg:flex-row lg:border lg:border-peach p-4 lg:p-2 lg:mt-14 rounded-lg max-w-4xl w-full bg-green transition-transform transform scale-105 shadow-2xl">
+      <div className="flex flex-col lg:flex-row lg:border lg:border-peach p-4 lg:p-2 lg:mt-14 rounded-lg max-w-4xl w-full bg-green transition-transform transform lg:scale-105 lg:shadow-2xl">
         {/* Left Section (Centered) */}
         <div className="flex flex-col items-center justify-center lg:items-center border-b lg:border-b-0 lg:border-r border-peach px-6 py-8 lg:py-0 lg:w-1/2 space-y-4">
           {/* Profile Image */}
@@ -30,7 +30,7 @@ const About = () => {
           </div>
 
           {/* Description */}
-          <p className="text-white text-sm mt-6 leading-relaxed">
+          <p className="text-white text-sm mt-6 leading-relaxed text-wrap">
             Experienced full stack developer with a strong foundation in web
             technologies. Proficient in HTML, CSS, React, Node.js, Angular, and
             MongoDB, enabling the creation of dynamic, responsive, and
@@ -38,7 +38,7 @@ const About = () => {
             development, with a focus on delivering high-quality user-friendly
             solutions.
           </p>
-          <p className="text-white text-sm mt-4 leading-relaxed">
+          <p className="text-white text-sm mt-4 leading-relaxed text-wrap">
             Proven ability to collaborate with cross-functional teams and meet
             project objectives efficiently. Dedicated to staying up-to-date
             with the latest industry trends and best practices in web
