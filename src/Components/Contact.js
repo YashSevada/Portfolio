@@ -4,9 +4,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-green text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-3xl md:text-4xl py-6 md:py-10">
-          Contact Me
-        </h1>
+        <h1 className="text-3xl md:text-4xl py-6 md:py-10">Contact Me</h1>
         <div className="flex flex-col md:flex-row justify-between lg:border lg:border-peach rounded-lg p-6 md:p-8 lg:mx-32 transition-transform transform scale-105 shadow-2xl">
           {/* Left Section */}
           <div className="md:w-1/2 border-b md:border-b-0 md:border-r border-peach pb-6 md:pb-0 md:pr-6">
@@ -53,6 +51,13 @@ const Contact = () => {
               />
 
               {/* Phone Number Field */}
+              <input
+                type="phone"
+                placeholder="Phone Number"
+                className="w-full p-2 bg-transparent border border-peach rounded-lg outline-none"
+              />
+
+              {/* Subject Field */}
               <input
                 type="text"
                 placeholder="Subject"
