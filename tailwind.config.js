@@ -10,6 +10,9 @@ module.exports = {
         white: "#ffffff",
         black: "#000000",
       },
+      animation: {
+        marquee: "marquee 30s linear infinite",
+      },
     },
   },
   plugins: [],

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import HTML from "../assets/HTML5.png"
 import CSS from "../assets/CSS3.png"
 import JavaScript from "../assets/JavaScript.png"
@@ -9,6 +9,8 @@ import NodeJS from "../assets/NodeJs.png"
 import Express from "../assets/Express.png"
 import MySQL from "../assets/MySql.png"
 import MongoDB from "../assets/MongoDB.png"
+import AWS from "../assets/AWS.png"
+import Git from "../assets/Git.png"
 
 const Skills = () => {
   const items = [
@@ -62,16 +64,42 @@ const Skills = () => {
       image: MongoDB,
       link: "https://www.mongodb.com/",
     },
+    {
+      name: "AWS",
+      image: AWS,
+      link: "https://aws.amazon.com/",
+    },
+    {
+      name: "Git",
+      image: Git,
+      link: "https://git-scm.com/",
+    },
   ];
+
+
+  const marqueeRef = useRef(null);
+
+  const handleScroll = () => {
+    const container = marqueeRef.current;
+    if (!container) return;
+
+    // Reset scroll to the beginning when reaching the end
+    if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+      container.scrollTo({ left: 0, behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="flex items-center justify-center bg-green text-white py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl md:text-4xl py-6 md:py-5 font-bold">Skills</h1>
-        <div className="overflow-hidden w-full px-6 group">
-          <div className="px-8">
-            <div className="flex space-x-6 animate-marquee-mobile lg:animate-marquee group-hover:animate-pause py-10 min-w-[380%]">
-              {items.concat(items).map((item, index) => (
+        <div className="overflow-hidden w-full">
+            <div
+            ref={marqueeRef}
+          onScroll={handleScroll}
+          style={{ scrollbarWidth: "none" }}  
+            className="flex space-x-6 overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hidden animate-marquee-mobile lg:animate-marquee group-hover:animate-pause py-10 min-w-[380%]">
+              {[...items, ...items].map((item, index) => (
                 <div
                   key={index}
                   className="card flex flex-col items-center justify-center min-w-48 min-h-48 border border-peach rounded-tl-3xl rounded-br-3xl shadow-lg transition-transform transform hover:scale-105"
@@ -94,7 +122,6 @@ const Skills = () => {
                 </div>
               ))}
             </div>
-          </div>
         </div>
       </div>
     </div>
