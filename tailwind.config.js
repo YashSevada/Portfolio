@@ -9,6 +9,8 @@ module.exports = {
         peach: "#EEC1A0",
         white: "#ffffff",
         black: "#000000",
+        linkedin: "#0077B5",
+        
       },
       animation: {
         marquee: "marquee 30s linear infinite",

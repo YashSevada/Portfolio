@@ -90,7 +90,7 @@ const Skills = () => {
   };
 
   return (
-    <div className="flex items-center justify-center bg-green text-white py-16">
+    <div id="skills" className="flex items-center justify-center bg-green text-white py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl md:text-4xl py-6 md:py-5 font-bold">Skills</h1>
         <div className="overflow-hidden w-full">

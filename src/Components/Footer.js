@@ -30,13 +30,12 @@ const Footer = () => {
   return (
     <div className="bg-green text-white py-6">
       {isVisible && (
-
-          <img
-            onClick={scrollToTop}
-            className="w-6 h-6 md:w-12 md:h-12 fixed bottom-20 right-6 text-white rounded-full shadow-2xl transition-all animate-bounce"
-            src={ScrollImage}
-            alt="Scroll Up"
-          />
+        <img
+          onClick={scrollToTop}
+          className="w-6 h-6 md:w-12 md:h-12 fixed bottom-20 right-6 text-white rounded-full shadow-2xl transition-all animate-bounce cursor-pointer"
+          src={ScrollImage}
+          alt="Scroll Up"
+        />
       )}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center">
         {/* Left Section */}
@@ -47,25 +46,33 @@ const Footer = () => {
         {/* Right Section */}
         <div className="flex space-x-4 mt-4 sm:mt-0">
           <a
-            href="#"
-            className="text-white hover:text-peach transition-colors"
-            aria-label="LinkedIn"
+            href="https://www.linkedin.com/in/yashsevada"
+            target="blank"
+            className="hover:text-white"
           >
-            <i className="fi fi-brands-linkedin text-peach text-xl md:text-xl"></i>
+            <i className="fa-brands fa-linkedin text-peach text-xl md:text-2xl hover:animate-pulse"></i>
           </a>
           <a
-            href="#"
-            className="text-white hover:text-peach transition-colors"
-            aria-label="GitHub"
+            href="https://github.com/YashSevada"
+            target="blank"
+            className="hover:text-white"
           >
-            <i className="fi fi-brands-github text-peach text-xl md:text-xl"></i>
+            <i className="fa-brands fa-github text-peach text-xl md:text-2xl hover:animate-pulse"></i>
           </a>
           <a
-            href="#"
-            className="text-white hover:text-peach transition-colors"
-            aria-label="Google"
+            href="https://stackoverflow.com/users/12067277/yash-sevada"
+            target="blank"
+            className="hover:text-white"
           >
-            <i className="fi fi-brands-google text-peach text-xl md:text-xl"></i>
+            <i className="fa-brands fa-stack-overflow text-peach text-xl md:text-2xl hover:animate-pulse"></i>
+          </a>
+
+          <a
+            href="https://gitlab.com/yashsevada2000"
+            target="blank"
+            className="hover:text-white"
+          >
+            <i className="fa-brands fa-gitlab text-peach text-xl md:text-2xl hover:animate-pulse"></i>
           </a>
         </div>
       </div>
