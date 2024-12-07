@@ -10,6 +10,7 @@ module.exports = {
         white: "#ffffff",
         black: "#000000",
         gray: "#E4E4E4",
+        faint: "#fbf7e9"
       },
       animation: {
         marquee: "marquee 30s linear infinite",

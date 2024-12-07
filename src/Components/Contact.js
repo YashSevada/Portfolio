@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
-import File from '../assets/Yash_Sevada_CV.pdf'
+import File from "../assets/Yash_Sevada_CV.pdf";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     firstName: "",
-    lastName:"",
+    lastName: "",
     email: "",
     phone: "",
-    subject:"",
+    subject: "",
     message: "",
   });
 
@@ -27,12 +27,12 @@ const Contact = () => {
         alert("Your message has been sent successfully!");
         setFormData({
           firstName: "",
-          lastName:"",
+          lastName: "",
           email: "",
           phone: "",
-          subject:"",
-          message: "",      
-        })
+          subject: "",
+          message: "",
+        });
       } else {
         alert("Something went wrong. Please try again.");
       }
@@ -51,7 +51,10 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="min-h-screen flex items-center justify-center bg-green text-white">
+    <div
+      id="contact"
+      className="min-h-screen flex items-center justify-center bg-green text-white"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <h1 className="text-3xl md:text-4xl py-6 md:py-10">Contact Me</h1>
         <div className="flex flex-col md:flex-row justify-between lg:border lg:border-peach rounded-lg p-6 md:p-8 lg:mx-32 transition-transform transform scale-105 shadow-2xl">
@@ -67,7 +70,10 @@ const Contact = () => {
               Address: A-1102, Bloomville Hinjewadi, Opp. Arabian Mandi House,
               Hinjewadi, Pune - 411015
             </p>
-            <button onClick={downloadCV} className="px-4 py-2 bg-transparent text-white border border-peach rounded-lg hover:bg-peach hover:text-green transition-all">
+            <button
+              onClick={downloadCV}
+              className="px-4 py-2 bg-transparent text-white border border-peach rounded-lg hover:bg-peach hover:text-green transition-all"
+            >
               Download CV
             </button>
           </div>
@@ -84,17 +90,17 @@ const Contact = () => {
                   type="text"
                   name="firstName"
                   value={formData.firstName}
-            onChange={handleChange}
+                  onChange={handleChange}
                   placeholder="First Name"
-                  className="w-full sm:w-1/2 p-2 bg-transparent border border-peach rounded-lg outline-none mb-4 sm:mb-0"
+                  className="w-full sm:w-1/2 p-2 bg-transparent border border-peach rounded-lg outline-none placeholder-faint placeholder-opacity-80 mb-4 sm:mb-0"
                 />
                 <input
                   type="text"
                   name="lastName"
                   value={formData.lastName}
-            onChange={handleChange}
+                  onChange={handleChange}
                   placeholder="Last Name"
-                  className="w-full sm:w-1/2 p-2 bg-transparent border border-peach rounded-lg outline-none"
+                  className="w-full sm:w-1/2 p-2 bg-transparent border border-peach rounded-lg outline-none placeholder-faint placeholder-opacity-80"
                 />
               </div>
 
@@ -103,9 +109,9 @@ const Contact = () => {
                 type="email"
                 name="email"
                 value={formData.email}
-            onChange={handleChange}
+                onChange={handleChange}
                 placeholder="Email"
-                className="w-full p-2 bg-transparent border border-peach rounded-lg outline-none"
+                className="w-full p-2 bg-transparent border border-peach rounded-lg outline-none placeholder-faint placeholder-opacity-80"
               />
 
               {/* Phone Number Field */}
@@ -113,9 +119,9 @@ const Contact = () => {
                 type="phone"
                 name="phone"
                 value={formData.phone}
-            onChange={handleChange}
+                onChange={handleChange}
                 placeholder="Phone Number"
-                className="w-full p-2 bg-transparent border border-peach rounded-lg outline-none"
+                className="w-full p-2 bg-transparent border border-peach rounded-lg outline-none placeholder-faint placeholder-opacity-80"
               />
 
               {/* Subject Field */}
@@ -123,9 +129,9 @@ const Contact = () => {
                 type="text"
                 name="subject"
                 value={formData.subject}
-            onChange={handleChange}
+                onChange={handleChange}
                 placeholder="Subject"
-                className="w-full p-2 md:pt-4 sm:pt-4 bg-transparent border border-peach rounded-lg outline-none"
+                className="w-full p-2 md:pt-4 sm:pt-4 bg-transparent border border-peach rounded-lg outline-none placeholder-faint placeholder-opacity-80"
               />
 
               {/* Message Field */}
@@ -133,12 +139,15 @@ const Contact = () => {
                 placeholder="Message"
                 name="message"
                 value={formData.message}
-            onChange={handleChange}
-                className="w-full p-2 bg-transparent border border-peach rounded-lg outline-none h-24 resize-none"
+                onChange={handleChange}
+                className="w-full p-2 bg-transparent border border-peach rounded-lg outline-none placeholder-faint placeholder-opacity-80 h-24 resize-none"
               ></textarea>
 
               {/* Submit Button */}
-              <button type="submit" className="w-full sm:w-auto px-6 py-2 bg-peach text-green rounded-lg hover:bg-green hover:text-white hover:border hover:border-peach transition-all">
+              <button
+                type="submit"
+                className="w-full sm:w-auto px-6 py-2 bg-peach text-green rounded-lg"
+              >
                 Send
               </button>
             </form>
