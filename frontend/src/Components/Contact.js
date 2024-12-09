@@ -66,9 +66,10 @@ const Contact = () => {
 
     setIsSending(true);
     setSendStatus("Please Wait... Sending Your Response");
+    const API_BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
 
     try {
-      const response = await axios.post("http://localhost:5000/send", formData);
+      const response = await axios.post(API_BASE_URL, formData);
       if (response.status === 200) {
         setFormData({
           firstName: "",

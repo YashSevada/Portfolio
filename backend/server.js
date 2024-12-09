@@ -33,7 +33,7 @@ service: 'gmail',
 });
 
 
-app.post("/send", async (req, res) => {
+app.post("/", async (req, res) => {
   const { firstName, lastName, email, phone, subject, message } = req.body;
 
   try {
