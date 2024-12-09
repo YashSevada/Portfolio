@@ -73,7 +73,7 @@ const Project = () => {
       className="lg:min-h-screen flex items-center justify-center bg-green text-white"
     >
       <div className="container mx-auto px-4 sm:px-8 py-8">
-        <h1 className="text-3xl md:text-4xl py-6 md:py-10">Projects</h1>
+        <h1 className="text-3xl md:text-4xl py-6 md:py-10 font-bold">Projects</h1>
 
         {isMobileView ? (
           // Mobile View
@@ -98,7 +98,7 @@ const Project = () => {
             </div>
 
             <div className="min-h-content space-y-4">
-              <p className="mt-2 font-semibold">
+              {/* <p className="mt-2 font-semibold">
                 <span className="text-gray text-md">
                   URL :{" "}
                   <a
@@ -108,7 +108,7 @@ const Project = () => {
                     www.yashsevada.com
                   </a>
                 </span>
-              </p>
+              </p> */}
               <div className="grid grid-cols-1 gap-x-10 gap-y-3 pt-5">
                 <div className="bg-peach h-auto my-4 rounded-lg shadow-md flex items-center justify-center">
                   <img
@@ -176,7 +176,7 @@ const Project = () => {
             </div>
 
             <div className="min-h-content space-y-4">
-              <p className="mt-2 font-semibold">
+              {/* <p className="mt-2 font-semibold">
                 <span className="text-gray text-md">
                   URL :{" "}
                   <a
@@ -186,7 +186,7 @@ const Project = () => {
                     www.easycrew.com
                   </a>
                 </span>
-              </p>
+              </p> */}
               <div className="grid grid-cols-1 gap-x-10 gap-y-3 pt-5">
                 <div className="bg-peach h-auto my-4 rounded-lg shadow-md flex items-center justify-center">
                   <img
@@ -252,14 +252,14 @@ const Project = () => {
                   Tools : Figma, Material UI
                 </span>
               </p>
-              <p className="mt-2 font-semibold">
+              <p className="mt-2 font-semibold overflow-x-hidden">
                 <span className="text-gray text-md">
                   Design URL :{" "}
                   <a
-                    href="www.behance.com"
+                    href="https://www.behance.net/gallery/214244283/Yash-Sevada-Portfolio"
                     className="text-gray underline underline-offset-6"
                   >
-                    www.behance.com
+                    https://www.behance.net/gallery/214244283/Yash-Sevada-Portfolio
                   </a>
                 </span>
               </p>
@@ -278,7 +278,7 @@ const Project = () => {
                 navigation, clear job descriptions, and interactive elements to
                 enhance usability.
               </p>
-              <p className="mt-2 font-semibold">
+              {/* <p className="mt-2 font-semibold">
                 <span className="text-peach text-lg">
                   Tools : Figma, Material UI
                 </span>
@@ -293,7 +293,7 @@ const Project = () => {
                     www.behance.com
                   </a>
                 </span>
-              </p>
+              </p> */}
             </div>
           </div>
         ) : (
@@ -513,7 +513,7 @@ const Project = () => {
                 ref={(el) => (contentRefs.current[0] = el)}
                 className="min-h-content"
               >
-                <h2 className="text-2xl font-bold mb-4">Portfolio</h2>
+                <h2 className="text-2xl font-bold mb-4 text-peach">1. Portfolio</h2>
                 <p className="text-gray text-justify mt-2">
                   Built a modern personal portfolio website utilizing React and
                   Tailwind CSS to exhibit skills, projects, and professional
@@ -527,17 +527,18 @@ const Project = () => {
                     Languages : React, Tailwind-CSS, NodeJs
                   </span>
                 </p>
-                <p className="mt-2 font-semibold">
+                {/* <p className="mt-2 font-semibold">
                   <span className="text-gray text-md">
                     URL :{" "}
                     <a
                       href="www.yashsevada.com/"
+                      target="blank"
                       className="text-gray underline underline-offset-6"
                     >
                       www.yashsevada.com
                     </a>
                   </span>
-                </p>
+                </p> */}
                 <div className="grid grid-cols-2 gap-x-10 gap-y-3 pt-5">
                   <div className="bg-peach h-auto my-4 rounded-lg shadow-md flex items-center justify-center">
                     <img
@@ -594,7 +595,7 @@ const Project = () => {
                 ref={(el) => (contentRefs.current[1] = el)}
                 className="min-h-content mt-10"
               >
-                <h2 className="text-2xl font-bold mb-4">EasyCrew</h2>
+                <h2 className="text-2xl font-bold mb-4 text-peach">2. EasyCrew</h2>
                 <p className="text-gray text-justify mt-2">
                   A comprehensive job portal built using Angular, Node.js and
                   MongoDB to bridge the gap between local workers and employers.
@@ -608,17 +609,18 @@ const Project = () => {
                     Languages : Angular, NodeJs, Express, MongoDB, Tailwind-CSS
                   </span>
                 </p>
-                <p className="mt-2 font-semibold">
+                {/* <p className="mt-2 font-semibold">
                   <span className="text-gray text-md">
                     URL :{" "}
                     <a
                       href="www.easycrew.com"
+                      target="blank"
                       className="text-gray underline underline-offset-6"
                     >
                       www.easycrew.com
                     </a>
                   </span>
-                </p>
+                </p> */}
                 <div className="grid grid-cols-2 gap-x-10 gap-y-3 pt-5">
                   <div className="bg-peach h-auto my-4 rounded-lg shadow-md flex items-center justify-center">
                     <img
@@ -659,7 +661,7 @@ const Project = () => {
                 ref={(el) => (contentRefs.current[2] = el)}
                 className="min-h-content mt-10"
               >
-                <h2 className="text-2xl font-bold mb-4">Classtro</h2>
+                <h2 className="text-2xl font-bold mb-4 text-peach">3. Classtro</h2>
                 <p className="text-gray text-justify mt-2">
                   Classtro is an online platform built using MERN Stack. The
                   objective of Classtro is to make online learning easy with
@@ -678,7 +680,7 @@ const Project = () => {
                 ref={(el) => (contentRefs.current[3] = el)}
                 className="min-h-content mt-16"
               >
-                <h2 className="text-2xl font-bold mb-4">Portfolio - UI/UX</h2>
+                <h2 className="text-2xl font-bold mb-4 text-peach">4. Portfolio - UI/UX</h2>
                 <p className="text-gray text-justify mt-2">
                   Designed and developed a modern, visually appealing personal
                   portfolio to showcase professional skills, projects, and
@@ -695,19 +697,25 @@ const Project = () => {
                   <span className="text-gray text-md">
                     Design URL :{" "}
                     <a
-                      href="www.behance.com"
+                      target="blank"
+                      href="https://www.behance.net/gallery/214244283/Yash-Sevada-Portfolio"
                       className="text-gray underline underline-offset-6"
                     >
-                      www.behance.com
+                    https://www.behance.net/gallery/214244283/Yash-Sevada-Portfolio
                     </a>
                   </span>
                 </p>
+                <div className="grid grid-cols-1 gap-x-10 gap-y-3 pt-5">
+                  <div className="h-auto my-4 rounded-lg flex items-center">
+                    <iframe className="border border-peach transition-transform transform lg:scale-105 lg:shadow-2xl" src="https://www.behance.net/embed/project/214244283?ilo0=1" height="316" width="404" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+                  </div>
+                </div>
               </div>
               <div
                 ref={(el) => (contentRefs.current[4] = el)}
                 className="min-h-content mt-16"
               >
-                <h2 className="text-2xl font-bold mb-4">EasyCrew - UI/UX</h2>
+                <h2 className="text-2xl font-bold mb-4 text-peach">5. EasyCrew - UI/UX</h2>
                 <p className="text-gray text-justify mt-2">
                   Conceptualized and designed an intuitive user interface for
                   EasyCrew, a job portal connecting local workers with
@@ -724,17 +732,18 @@ const Project = () => {
                     Tools : Figma, Material UI
                   </span>
                 </p>
-                <p className="mt-2 font-semibold">
+                {/* <p className="mt-2 font-semibold">
                   <span className="text-gray text-md">
                     Design URL :{" "}
                     <a
                       href="www.behance.com"
+                      target="blank"
                       className="text-gray underline underline-offset-6"
                     >
                       www.behance.com
                     </a>
                   </span>
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

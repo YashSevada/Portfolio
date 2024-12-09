@@ -35,6 +35,17 @@ const Header = () => {
     link.click();
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+    sideBarClose()
+  };
+
   return (
     <div className="bg-green text-white">
       {/* Navigation Bar */}
@@ -55,27 +66,27 @@ const Header = () => {
 
         {/* Desktop Navigation Links */}
         <ul className="hidden md:flex space-x-4 lg:space-x-6">
-          <a href="#about">
+          <a onClick={() => scrollToSection("about")}>
             <li className="cursor-pointer hover:text-peach hover:border hover:rounded-tl-xl hover:rounded-br-xl hover:border-peach px-4 py-1">
               About
             </li>
           </a>
-          <a href="#projects">
+          <a onClick={() => scrollToSection("projects")}>
             <li className="cursor-pointer hover:text-peach hover:border hover:rounded-tl-xl hover:rounded-br-xl hover:border-peach px-4 py-1">
               Projects
             </li>
           </a>
-          <a href="#skills">
+          <a onClick={() => scrollToSection("skills")}>
             <li className="cursor-pointer hover:text-peach hover:border hover:rounded-tl-xl hover:rounded-br-xl hover:border-peach px-4 py-1">
               Skills
             </li>
           </a>
-          <a href="#experience">
+          <a onClick={() => scrollToSection("experience")}>
             <li className="cursor-pointer hover:text-peach hover:border hover:rounded-tl-xl hover:rounded-br-xl hover:border-peach px-4 py-1">
               Experience
             </li>
           </a>
-          <a href="#contact">
+          <a onClick={() => scrollToSection("contact")}>
             <li className="cursor-pointer hover:text-peach hover:border hover:rounded-tl-xl hover:rounded-br-xl hover:border-peach px-4 py-1">
               Contact
             </li>
@@ -105,25 +116,25 @@ const Header = () => {
           <i className="fa-solid fa-xmark text-peach text-xl md:text-2xl"></i>
         </button>
 
-        <ul className="space-y-14 text-center">
-          <a href="#about">
-            <li className="cursor-pointer hover:text-peach text-lg">About</li>
+        <ul className="space-y-10 text-center">
+          <a onClick={() => scrollToSection("about")}>
+            <li className="cursor-pointer py-5 hover:text-peach text-lg">About</li>
           </a>
-          <a href="#projects">
-            <li className="cursor-pointer hover:text-peach text-lg">
+          <a onClick={() => scrollToSection("projects")}>
+            <li className="cursor-pointer py-5 hover:text-peach text-lg">
               Projects
             </li>
           </a>
-          <a href="#skills">
-            <li className="cursor-pointer hover:text-peach text-lg">skills</li>
+          <a onClick={() => scrollToSection("skills")}>
+            <li className="cursor-pointer py-5 hover:text-peach text-lg">skills</li>
           </a>
-          <a href="#experience">
-            <li className="cursor-pointer hover:text-peach text-lg">
+          <a onClick={() => scrollToSection("experience")}>
+            <li className="cursor-pointer py-5 hover:text-peach text-lg">
               Experience
             </li>
           </a>
-          <a href="#contact">
-            <li className="cursor-pointer hover:text-peach text-lg">Contact</li>
+          <a onClick={() => scrollToSection("contact")}>
+            <li className="cursor-pointer py-5 hover:text-peach text-lg">Contact</li>
           </a>
           <button
             onClick={downloadCV}

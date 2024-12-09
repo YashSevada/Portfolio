@@ -3,6 +3,13 @@ import ScrollImage from "../assets/scroll-down.png";
 import Header from "./Header";
 
 const Hero = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 650,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="bg-green min-h-screen flex flex-col items-center justify-center text-center text-white relative px-4 sm:px-8">
       <Header />
@@ -62,14 +69,12 @@ const Hero = () => {
       </div>
 
       {/* Down Arrow */}
-      <div className="absolute bottom-4 md:bottom-2">
-        <a href="#">
+      <div className="absolute bottom-4 md:bottom-2 cursor-pointer" onClick={scrollToTop}>
           <img
             className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 animate-bounce"
             src={ScrollImage}
             alt="Scroll Down"
           />
-        </a>
       </div>
     </div>
   );

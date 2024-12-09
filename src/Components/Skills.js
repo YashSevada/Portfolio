@@ -12,6 +12,7 @@ import MongoDB from "../assets/MongoDB.png";
 import AWS from "../assets/AWS.png";
 import Git from "../assets/Git.png";
 import TailwindCSS from "../assets/TailwindCSS.jpg";
+import ScrollImage from "../assets/scroll-down.png";
 
 const Skills = () => {
   const items = [
@@ -106,7 +107,7 @@ const Skills = () => {
             ref={marqueeRef}
             onScroll={handleScroll}
             style={{ scrollbarWidth: "none" }}
-            className="flex space-x-6 overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hidden animate-marquee-mobile lg:animate-marquee group-hover:animate-pause py-10 min-w-[380%]"
+            className="flex space-x-6 overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hidden animate-marquee-mobile lg:animate-marquee group-hover:animate-pause py-10 min-w-[420%]"
           >
             {[...items, ...items].map((item, index) => (
               <div
@@ -129,6 +130,7 @@ const Skills = () => {
                   </a>
                 </h6>
               </div>
+              
             ))}
           </div>
         </div>
